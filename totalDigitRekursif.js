@@ -1,15 +1,16 @@
-function totalDigitRekursif(angka) {
-	var toString = String(angka)
+function totalDigitRekursif(nilai){
+    var ubahAngka = String(nilai)
+    if(ubahAngka.length === 1){
+        return Number(ubahAngka[0])
+    }else{
+        var potongNilai = ubahAngka.slice(1) // akan dipotong sebanyak 1
+        var ambilNilaiDepan = N umber(nilai[0])
+        
 
-	if(toString.length === 1){
-		return Number(angka)
-	}else{
-		var kurangLength = toString.slice(1)
-		var hasilSementara = Number(toString[0])
+        return ambilNilaiDepan + totalDigitRekursif(Number(potongNilai))
 
-		return hasilSementara + totalDigitRekursif(Number(kurangLength))
-	}
-  }
+    }
+}
   
   // TEST CASES
   console.log(totalDigitRekursif(512)); // 8
