@@ -1,10 +1,10 @@
 function totalDigitRekursif(nilai){
     var ubahAngka = String(nilai)
     if(ubahAngka.length === 1){
-        return Number(ubahAngka[0])
+        return Number(nilai)
     }else{
         var potongNilai = ubahAngka.slice(1) // akan dipotong sebanyak 1
-        var ambilNilaiDepan = N umber(nilai[0])
+        var ambilNilaiDepan = Number(ubahAngka[0])
         
 
         return ambilNilaiDepan + totalDigitRekursif(Number(potongNilai))
