@@ -1,5 +1,5 @@
 function sorting(arrNumber) {
-    var urutkan = arrNumber.sort()
+    var urutkan = arrNumber.sort(function(a,b){return a > b})
      return urutkan
    }
    
@@ -16,7 +16,7 @@ function sorting(arrNumber) {
              count += 1
          }
      }
- 
+  
      if(cukurDouble[cukurDouble.length-1] !== undefined){
          return "angka paling besar adalah " + cukurDouble[cukurDouble.length-1] + " dan jumlah kemunculan sebanyak " + count +" kali"
      }else{
@@ -30,7 +30,7 @@ function sorting(arrNumber) {
      return countHighest;
    }
    
-   console.log(mostFrequentLargestNumbers([2, 8, 4, 6, 8, 5, 8, 4, 9]));
+   console.log(mostFrequentLargestNumbers([2, 8, 4, 6, 8, 5, 8, 4]));
    //'angka paling besar adalah 8 dan jumlah kemunculan sebanyak 3 kali'
    
    console.log(mostFrequentLargestNumbers([122, 122, 130, 100, 135, 100, 135, 150]));
